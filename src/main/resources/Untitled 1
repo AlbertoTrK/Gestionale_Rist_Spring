@@ -1,0 +1,16 @@
+/*scorporare aggiungi ordine in inviaOrdine e in aggiungi ad ordine:
+	aggiungi ad ordine aggiunge solo righe d'ordine a ordine esistente, da trovare con Ordine o = findById(idOrdine),
+	
+			List<RigaDOrdine> righeDOrdine = new ArrayList<>();
+			for (Long idProdotto : request.getIdProdottoQuantità().keySet()) {
+				int quantità = request.getIdProdottoQuantità().get(idProdotto);
+				RigaDOrdine rigaOrdine = new RigaDOrdine();
+				//aggiunge anche piatto non associato a ristorante
+				rigaOrdine.setPiatto(servPiatto.findById(idProdotto));
+				rigaOrdine.setOrdine(o);
+				rigaOrdine.setQuantità(quantità);
+				//id righe ordine??
+				righeDOrdine.add(rigaOrdine);
+			}
+	inviaOrdine prende l'ordine e setta stato = ricevuto e data = now()
+	*/
